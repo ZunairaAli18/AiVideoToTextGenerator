@@ -1,0 +1,91 @@
+{
+  "task_id": "f4ffe914-5759-43ee-8e92-08f48e57190b",
+  "total_chunks": 17,
+  "chunks": [
+    {
+      "chunk_number": 1,
+      "text": "Python is an integrated object oriented high level programming language which is used in dynamic cementing. So, we can change this data at random times. Python can use a readable language and use a friendly language. This is a complete object oriented programming language and it is very easy to use. In late 1980s, Gwido 1 Rossam started his development. When Gwido 1 Rossam was making this language, he was watching a show called Monty Python Circus. And he was watching it.",
+      "timestamp": "0-30s"
+    },
+    {
+      "chunk_number": 2,
+      "text": "and said he actually knew very well the least and a few faults in his words .. so his decision made a sense in my thoughts Laz楠 and now it is time to confirm more about the backing performance It is revolutionary inSarks Long time no see So definitely Os involvement.",
+      "timestamp": "30-60s"
+    },
+    {
+      "chunk_number": 3,
+      "text": "After the core of Python, a 5 member team will lead the Python for the development. Girdawon Rosham has told us that what started the development of Python? And they have read out this text and post it on the video. After Python's long journey, one of the most preferred programming languages was seen in the history of Python. In the 1990s, Python's development started from the very beginning and Python was released in 2000.",
+      "timestamp": "60-90s"
+    },
+    {
+      "chunk_number": 4,
+      "text": "In 2008, Python 3 was released and in the same way, Python 3 was released with a 2-3-name utility which was in the context of Python 2 and Python 3 which was in the context of Python 2 and Python 2. In the context of Python, Python 2 and Python were used by Python 2.7 because its syntax was very comfortable and in the context of Python 3, there were some changes which were different from Python 2 because of the learning of developers and Python 3 was not a migrate Python 2.7",
+      "timestamp": "90-120s"
+    },
+    {
+      "chunk_number": 5,
+      "text": "end of life announced in 2015 meaning that no update of Python took place after it and all the core development of Python 3 was taken by the whole code Python version 3.9.2 and 3.8.8 were two versions of which the development was very hard because in them, some security updates which were missing in Python and some vulnerabilities like remote code execution and web cache poisoning in previous versions of Python, they had to fix these patches and he would",
+      "timestamp": "120-150s"
+    },
+    {
+      "chunk_number": 6,
+      "text": "Where they use Python in all languages So try to write the syntax in Python You can write in Python Kmud you call it Angela Pauld symbol which you can write about one hr and its a Python could not use rat Think one time to writeppy complaints若此事",
+      "timestamp": "150-180s"
+    },
+    {
+      "chunk_number": 7,
+      "text": "which is a string or a number or a variable in a print. The print syntax is something like this. Python 3 can print something in it. You can print your name, number, floating point, number, or a object can print it. Python can use arithmetic operators in it which you can do it in a plus, minus, times, and divide it. You can declare variables simply variable equals to value. If you write a string, you can write double-code or single-code",
+      "timestamp": "180-210s"
+    },
+    {
+      "chunk_number": 8,
+      "text": "and triple codes can be used for multi-line strings. You can do something like this and you can do something like this for a floating point or a decimal number. And after declaring a name, you can also change the data type. You can use the list for more values, the list of syntax, the square bracket, you can write something like this. You can change the list anytime, you can append the values in it, you can write a code type in Python.",
+      "timestamp": "210-240s"
+    },
+    {
+      "chunk_number": 9,
+      "text": "It is very similar to the list, but you cannot change it. This data type is called TAPAL. You can write TAPAL in this way. This can be written on the paranthesis of the paranthesis. To write a number, you have to write an extra comma from this way. If I write A is equal to, and I will close one comma in the bracket and I will close the bracket in this way. Then this number will make me a TAPAL. To store value pairs, you can use a dictionary. You can write a readable number.",
+      "timestamp": "240-270s"
+    },
+    {
+      "chunk_number": 10,
+      "text": "Python is a language that is called as developers for use, it is a friend, it is a beginner and it is a friend of this dictionary. It is the same way that you see the value pairs in the actual dictionary, the keys are the meaning of the words which you want to see. And the meaning is the value, that is the thing that you want to see. Python can make the dictionary in this way. It can be used in a curly bracket in this way. And you can see the value pairs of the words which you want to see.",
+      "timestamp": "270-300s"
+    },
+    {
+      "chunk_number": 11,
+      "text": "you can write something like this. Then for access to key value payas, you can write something like this. Python has another collection, a set. The basic idea of a set is that you can't put it in duplicate values. You can initialize a set like this and if you put one in the set, then two, then three, then nine, then you will see it like this. But if I put one in two, then the value of the set will not change. Because the set has one in it. Shadow gun north.",
+      "timestamp": "300-330s"
+    },
+    {
+      "chunk_number": 12,
+      "text": "If you do this, I get repeated values. Sets, we solve this problem, where we have to repeat the repeated values. With this, you can use some non-value, not to represent anything. And when you write non-value, you will write it like this. You can use Boolean values to store true and false. If you only have true or false stories in your variable, you can write true or false. But within this, it РЕ",
+      "timestamp": "330-360s"
+    },
+    {
+      "chunk_number": 13,
+      "text": "and some kind of syntax, if and else can write it this way and if LF LF else can make some kind of a letter If you don't write a condition that will value in the root of false if it value in true, then if it goes inside and if it value in false, then LF will check the conditions of LF In Python, to make functions, you use the word of def, in some way, you can return the value in function and if you don't return anything, then FB",
+      "timestamp": "360-390s"
+    },
+    {
+      "chunk_number": 14,
+      "text": "In the function, the value will be written. This is the same thing that I told you earlier. The biggest beauty of Python is modules. Many people have written many codes in Python which you can use to import and import this code. You will import it on the module. For import, there are some syntax in Python. Now these modules are kept in both. Built-in and external modules. Built-in modules are first in Python. You don't have to install them. Laken-jam� the external sample-",
+      "timestamp": "390-420s"
+    },
+    {
+      "chunk_number": 15,
+      "text": "For example, you can install a certain type of module from a tip or tool so that you can use it in your computer and write your Python script. This code usually works on classes and functions. When you want to advance in Python, you may also make your module yourself and maybe you can publish it so that you can use your code. Then you can use an object-oriented programming language.",
+      "timestamp": "420-450s"
+    },
+    {
+      "chunk_number": 16,
+      "text": "objects can be used for the object oriented paradigm. Object oriented programming means that you can make some objects from its size from a blueprint to a class of empty form. So I will say that I am the object of individual people. This class has formed objects. You can make your custom classes and already define classes and change the classes. An important【QAn还在这里】",
+      "timestamp": "450-480s"
+    },
+    {
+      "chunk_number": 17,
+      "text": "You can live in the use of the syntax. So this was the story about Python. Now we have a video with you guys. Thank you so much guys for watching this video and I will see you next time.",
+      "timestamp": "480-510s"
+    }
+  ]
+}
