@@ -1,0 +1,31 @@
+{
+  "task_id": "ae990123-a0c9-4cea-a151-1919fbefa0f4",
+  "total_chunks": 5,
+  "chunks": [
+    {
+      "chunk_number": 1,
+      "text": "Nicole Strike",
+      "timestamp": "0-30s"
+    },
+    {
+      "chunk_number": 2,
+      "text": "You won't get this wrong any other guy I just want to tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around it He's ready to Never gonna make you cry Never gonna say goodbye Never gonna tell the lie and hurt you",
+      "timestamp": "30-60s"
+    },
+    {
+      "chunk_number": 3,
+      "text": "We've known each other for so long Your heart's been aching back Your touch has to say You said we've all known what's been going on We know the game I'm with Gonna play it And if you ask me how I feel It won't turn me on too Not to see There's a gonna give you up There's a gonna let you down There's a gonna give up",
+      "timestamp": "60-90s"
+    },
+    {
+      "chunk_number": 4,
+      "text": "Never gonna say goodbye, never gonna tell the lie, and hurt you. Never gonna give you up, never gonna let you down. Never gonna run around and hurt you, never gonna make you cry. Never gonna say goodbye, never gonna tell the lie, and hurt you.",
+      "timestamp": "90-120s"
+    },
+    {
+      "chunk_number": 5,
+      "text": "I'm gonna play a game and we're gonna play a game I just wanna tell you how I feel I gotta make you understand And I'm gonna give you up I'm gonna let you down And I'm gonna run around it Who's ready to? And I'm gonna make you cry I'm gonna save your life And I'm gonna tell you my And I'm ready to And I'm gonna give you up",
+      "timestamp": "120-150s"
+    }
+  ]
+}

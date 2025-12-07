@@ -1,5 +1,7 @@
+import uuid
 from flask import Flask, request, jsonify
 import os
+import yt_dlp
 from moviepy import VideoFileClip
 import whisper
 from flask_cors import CORS 
@@ -168,6 +170,15 @@ def transcribe_async(task_id, audio_path):
             "percent": 0
         }
 
+def download_video_from_youtube(url, download_path):
+    """Download video from YouTube using yt-dlp"""
+    ydl_opts = {
+        'format': 'best',
+        'outtmpl': download_path
+    }
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([url])
+
 @app.route('/upload_video', methods=['POST'])
 def upload_video():
     try:
@@ -250,6 +261,65 @@ def get_chunks(task_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+
+@app.route('/youtube_transcribe', methods=['POST'])
+def youtube_transcribe():
+    """Transcribe YouTube video"""
+    try:
+        # Get YouTube URL from request
+        url = request.json.get("url")
+        if not url:
+            return jsonify({"error": "No URL provided"}), 400
+
+        # Download video from YouTube
+        video_filename = f"{uuid.uuid4()}.mp4"
+        video_path = os.path.join(upload_folder, video_filename)
+
+        download_video_from_youtube(url, video_path)
+
+        print(f"Video downloaded from YouTube: {video_path}")
+
+        # Define audio path
+        audio_filename = 'extracted_audio.wav'
+        audio_path = os.path.join(upload_folder, audio_filename)
+
+        # Extract audio
+        print(f"Extracting audio to: {audio_path}")
+        extract_audio(video_path, audio_path)
+
+        # Check if extraction was successful
+        if not os.path.exists(audio_path):
+            raise FileNotFoundError(f"Audio extraction failed - file {audio_path} does not exist")
+
+        print(f"Audio file {audio_path} exists, proceeding with transcription")
+
+        # Generate unique task ID
+        task_id = str(uuid.uuid4())
+
+        # Initialize status
+        transcription_status[task_id] = {
+            "status": "queued",
+            "progress": "Starting transcription...",
+            "percent": 0
+        }
+
+        # Start transcription in background thread
+        thread = threading.Thread(target=transcribe_async, args=(task_id, audio_path))
+        thread.daemon = True
+        thread.start()
+
+        # Return task ID immediately
+        return jsonify({
+            "task_id": task_id,
+            "message": "Transcription started. Use /status endpoint to check progress."
+        })
+
+    except Exception as e:
+        print(f"Error occurred: {e}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
+    
 @app.route('/health', methods=['GET'])
 def health():
     """Health check endpoint"""

@@ -9,13 +9,17 @@ export default function Home() {
   const [status, setStatus] = useState<string>('');
   const [transcription, setTranscription] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
+  const [youtubeLink, setYoutubeLink] = useState<string>(''); 
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files) {
       setFile(event.target.files[0]);
     }
   };
-
+  
+  const handleYoutubeLinkChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setYoutubeLink(event.target.value);
+  };
   const handleFileUpload = async () => {
     if (!file) {
       alert('Please select a file');
@@ -43,7 +47,29 @@ export default function Home() {
       setIsProcessing(false);
     }
   };
+  const handleYoutubeUpload = async () => {
+    if (!youtubeLink) {
+      alert('Please provide a YouTube link');
+      return;
+    }
 
+    try {
+      setStatus('Processing YouTube video...');
+      setIsProcessing(true);
+      const response = await axios.post('http://localhost:5000/youtube_transcribe', {
+        url: youtubeLink,
+      });
+
+      const { task_id } = response.data;
+      setTaskId(task_id);
+      setStatus('Transcription started...');
+      monitorTaskStatus(task_id);
+    } catch (error) {
+      console.error('Error processing YouTube link:', error);
+      setStatus('Error occurred during YouTube processing');
+      setIsProcessing(false);
+    }
+  };
   const monitorTaskStatus = async (taskId: string) => {
     const interval = setInterval(async () => {
       try {
@@ -100,6 +126,23 @@ export default function Home() {
             'Upload Video'
           )}
         </button>
+        {/* New section for YouTube link input */}
+        <div className="mt-4">
+          <input
+            type="text"
+            value={youtubeLink}
+            onChange={handleYoutubeLinkChange}
+            placeholder="Enter YouTube link"
+            className="mb-4 px-4 py-2 w-full rounded-md border-2 border-neonred text-neonwhite bg-gray-400 focus:outline-none focus:ring-2 focus:ring-neonred"
+          />
+          <button
+            onClick={handleYoutubeUpload}
+            className="w-full py-2 px-4 bg-blue-600 text-black rounded-md font-bold hover:bg-white hover:text-black transition duration-300"
+            disabled={isProcessing}
+          >
+            {isProcessing ? 'Processing YouTube...' : 'Process YouTube Video'}
+          </button>
+        </div>
       </div>
 
       {status && (
